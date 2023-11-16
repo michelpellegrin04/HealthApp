@@ -11,6 +11,7 @@
 		082CD80B2B03CCD900FD81F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082CD80A2B03CCD900FD81F8 /* ContentView.swift */; };
 		082CD80D2B03CCDA00FD81F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082CD80C2B03CCDA00FD81F8 /* Assets.xcassets */; };
 		082CD8102B03CCDA00FD81F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082CD80F2B03CCDA00FD81F8 /* Preview Assets.xcassets */; };
+		085616352B051C8A00A8256F /* FactorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085616342B051C8A00A8256F /* FactorsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		082CD80A2B03CCD900FD81F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		082CD80C2B03CCDA00FD81F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		082CD80F2B03CCDA00FD81F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		085616342B051C8A00A8256F /* FactorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				082CD8082B03CCD900FD81F8 /* HealthApp.swift */,
 				082CD80A2B03CCD900FD81F8 /* ContentView.swift */,
+				085616342B051C8A00A8256F /* FactorsView.swift */,
 				082CD80C2B03CCDA00FD81F8 /* Assets.xcassets */,
 				082CD80E2B03CCDA00FD81F8 /* Preview Content */,
 			);
@@ -83,6 +86,8 @@
 			dependencies = (
 			);
 			name = Health;
+			packageProductDependencies = (
+			);
 			productName = Health;
 			productReference = 082CD8052B03CCD900FD81F8 /* Health.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,8 @@
 				Base,
 			);
 			mainGroup = 082CD7FC2B03CCD900FD81F8;
+			packageReferences = (
+			);
 			productRefGroup = 082CD8062B03CCD900FD81F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085616352B051C8A00A8256F /* FactorsView.swift in Sources */,
 				082CD80B2B03CCD900FD81F8 /* ContentView.swift in Sources */,
 				082CD8092B03CCD900FD81F8 /* HealthApp.swift in Sources */,
 			);
