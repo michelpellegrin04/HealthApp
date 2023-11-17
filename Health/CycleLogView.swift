@@ -85,6 +85,7 @@ struct CycleLogView: View {
             }
             .scrollContentBackground(.hidden)
             .background(Color.white.edgesIgnoringSafeArea(.all))
+            //.scrollDisabled(true)
         }
     }
 }
