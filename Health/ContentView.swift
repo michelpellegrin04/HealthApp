@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var date = Date()
-   var infoCardsViewModel = InfoCardsViewModel()
+    @State private var isModalPresented = false
+    var infoCardsViewModel = InfoCardsViewModel()
     
     var body: some View {
         NavigationView{
             //ScrollView{
             VStack{
                 List{
+                    HorizontalCalendarView()
                     Section{
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
                             HStack{
@@ -104,7 +106,17 @@ struct ContentView: View {
                     .headerProminence(.increased)
                     ForEach(infoCardsViewModel.infoCards) { singleCard in
                         Section {
-                            CardView(singleCard: singleCard)
+                            VStack(alignment: .leading, spacing: 0) {
+                                Button(action: {
+                                    isModalPresented.toggle()
+                                }) {
+                                    CardView(singleCard: singleCard)
+                                }
+                                .sheet(isPresented: $isModalPresented) {
+                                    // Your modal content goes here
+                                    Text("This is the modal for \(singleCard.cardName)")
+                                }
+                            }
                         }
                     }
                     

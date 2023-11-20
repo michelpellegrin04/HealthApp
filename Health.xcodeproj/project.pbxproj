@@ -18,6 +18,7 @@
 		085616412B0676BE00A8256F /* InfoCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085616402B0676BE00A8256F /* InfoCardsModel.swift */; };
 		085616432B067A1100A8256F /* InfoCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085616422B067A1100A8256F /* InfoCardsViewModel.swift */; };
 		085616452B067E8800A8256F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085616442B067E8800A8256F /* CardView.swift */; };
+		085616472B0B9ECE00A8256F /* CalendarScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085616462B0B9ECE00A8256F /* CalendarScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		085616402B0676BE00A8256F /* InfoCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardsModel.swift; sourceTree = "<group>"; };
 		085616422B067A1100A8256F /* InfoCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardsViewModel.swift; sourceTree = "<group>"; };
 		085616442B067E8800A8256F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		085616462B0B9ECE00A8256F /* CalendarScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				0856163E2B066C5100A8256F /* CycleHistoryView.swift */,
 				0856163A2B06654700A8256F /* CycleLogView.swift */,
 				085616362B06380700A8256F /* CalendarView.swift */,
+				085616462B0B9ECE00A8256F /* CalendarScrollView.swift */,
 				085616342B051C8A00A8256F /* FactorsView.swift */,
 				082CD80C2B03CCDA00FD81F8 /* Assets.xcassets */,
 				082CD80E2B03CCDA00FD81F8 /* Preview Content */,
@@ -165,6 +168,7 @@
 				085616432B067A1100A8256F /* InfoCardsViewModel.swift in Sources */,
 				085616452B067E8800A8256F /* CardView.swift in Sources */,
 				085616352B051C8A00A8256F /* FactorsView.swift in Sources */,
+				085616472B0B9ECE00A8256F /* CalendarScrollView.swift in Sources */,
 				082CD80B2B03CCD900FD81F8 /* ContentView.swift in Sources */,
 				0856163F2B066C5100A8256F /* CycleHistoryView.swift in Sources */,
 				085616372B06380700A8256F /* CalendarView.swift in Sources */,
