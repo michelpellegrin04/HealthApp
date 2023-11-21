@@ -37,6 +37,7 @@ struct HorizontalCalendarView: View {
 struct CalendarDateView: View {
     let date: Date
     @State private var showCircle = false
+    @State private var selectedElementIndex: Int?
     
     func dayOfWeekInitial(from date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -55,13 +56,13 @@ struct CalendarDateView: View {
                         .fill(isToday(date: date) ? Color.black : Color.clear)
                 )
             ZStack{
-                Color.gray.opacity(0.3)
+                Color.gray.opacity(0.2)
                     .clipShape(RoundedRectangle(cornerRadius: 70))
                     .frame(width: 40, height: 60)
                 if showCircle {
                     Circle()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.red)
+                        .foregroundColor(.red.opacity(0.6))
                         .padding(.bottom, 20)
                 }
                 
