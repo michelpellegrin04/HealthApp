@@ -31,11 +31,12 @@ struct HorizontalCalendarView: View {
             .padding()
         }
     }
-   
+    
 }
 
 struct CalendarDateView: View {
     let date: Date
+    @State private var showCircle = false
     
     func dayOfWeekInitial(from date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -45,14 +46,32 @@ struct CalendarDateView: View {
     
     var body: some View {
         VStack {
-            Text(dayOfWeekInitial(from: date)) // Utiliza la función para obtener la inicial del día
-                    .font(.headline)
-                    .foregroundColor(isToday(date: date) ? Color.white : Color.gray)
-                    .padding(20)
-                    .background(
-                        Circle()
-                            .fill(isToday(date: date) ? Color.black : Color.clear)
-                    )
+            Text(dayOfWeekInitial(from: date))
+                .font(.headline)
+                .foregroundColor(isToday(date: date) ? Color.white : Color.gray)
+                .padding(10)
+                .background(
+                    Circle()
+                        .fill(isToday(date: date) ? Color.black : Color.clear)
+                )
+            ZStack{
+                Color.gray.opacity(0.3)
+                    .clipShape(RoundedRectangle(cornerRadius: 70))
+                    .frame(width: 40, height: 60)
+                if showCircle {
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.red)
+                        .padding(.bottom, 20)
+                }
+                
+            }
+            .onTapGesture {
+                withAnimation {
+                    showCircle.toggle()
+                }
+            }
+            
             
             /*Text(date, style: .date)
              .font(.caption)
