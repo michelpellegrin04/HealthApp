@@ -17,7 +17,7 @@ struct ContentView: View {
             //ScrollView{
             VStack{
                 List{
-                    HorizontalCalendarView()
+                    FactorsView()
                     Section{
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
                             HStack{
