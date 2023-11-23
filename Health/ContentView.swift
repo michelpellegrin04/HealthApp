@@ -21,9 +21,10 @@ struct ContentView: View {
                         .padding(-5)
                     
                     Section{
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                        Button(action: {}){
                             HStack{
                                 Text("Period")
+                                    .accessibilityLabel("Add period")
                                     .frame(height: 30)
                                     .foregroundColor(.black)
                                 Spacer()
@@ -54,9 +55,10 @@ struct ContentView: View {
                     .listRowBackground(Color.red.opacity(0.1))
                     
                     Section{
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                        Button(action: {}){
                             HStack{
                                 Text("Symptoms")
+                                    .accessibilityLabel("Add symptoms")
                                     .frame(height: 30)
                                     .foregroundColor(.black)
                                 Spacer()
@@ -65,9 +67,10 @@ struct ContentView: View {
                                     .bold()
                             }
                         }
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                        Button(action: {}){
                             HStack{
                                 Text("Spotting")
+                                    .accessibilityLabel("Add spotting")
                                     .frame(height: 30)
                                     .foregroundColor(.black)
                                 Spacer()
@@ -86,6 +89,7 @@ struct ContentView: View {
                             HStack{
                                 Text("Factors")
                                     .frame(height: 30)
+                                    .accessibilityLabel("See factors")
                                 Spacer()
                                 Text("Pill")
                                     .bold()
@@ -121,6 +125,13 @@ struct ContentView: View {
                     }
                     .listRowBackground(Color.white)
                     .headerProminence(.increased)
+                    Section{
+                    } header: {
+                        Text("About Cycle Tracking")
+                            .font(.title2)
+                            .bold()
+                    }
+                    .headerProminence(.increased)
                     ForEach(infoCardsViewModel.infoCards) { singleCard in
                         Section {
                             VStack(alignment: .leading, spacing: 0) {
@@ -135,6 +146,7 @@ struct ContentView: View {
                                 }
                             }
                         }
+                        .headerProminence(.increased)
                         .listSectionSeparator(.hidden)
                     }
                     

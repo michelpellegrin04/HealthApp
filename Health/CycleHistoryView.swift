@@ -16,7 +16,9 @@ struct CycleHistoryView: View {
             HStack{
                 Text("Current Cycle:")
                     .bold()
-                Text("Date of the current cycle")
+                Text("November 6th, 2023")
+                    //.accessibilityLabel("See days of current cycle")
+                
             }
             /*HStack{
                 //If theres factors then show factors
@@ -26,8 +28,8 @@ struct CycleHistoryView: View {
                 Text("Pill")
                     .foregroundStyle(Color.gray.opacity(0.8))
             }*/
-            Text("Dias de periodo")
-                .foregroundStyle(Color.gray.opacity(0.8))
+            //Text("Dias de periodo")
+                //.foregroundStyle(Color.gray.opacity(0.8))
         }
     }
 }

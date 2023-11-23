@@ -19,12 +19,14 @@ struct FactorsView: View {
                 .padding()
             Divider()
             Image(systemName: "arrowtriangle.down.fill")
+                .accessibilityHidden(true)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(Array(generateDates().enumerated()), id: \.1) { index, date in
                         VStack {
                             Text(dayOfWeekInitial(from: date))
+                                .accessibilityLabel("Double tap to add period on  \(dayOfWeekInitialAccesibility(from: date))")
                                 .font(.headline)
                                 .foregroundColor(isToday(date: date) ? Color.white : Color.gray)
                                 .padding(5)
@@ -40,6 +42,7 @@ struct FactorsView: View {
                                 Color.gray.opacity(0.2)
                                     .clipShape(RoundedRectangle(cornerRadius: 70))
                                     .frame(width: 40, height: 60)
+                                    
                                     
                                 if showCircle && selectedIndex == index {
                                     Circle()
@@ -109,6 +112,12 @@ func dayOfWeekInitial(from date: Date) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "E"
     return String(dateFormatter.string(from: date).prefix(1))
+}
+
+func dayOfWeekInitialAccesibility(from date: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMMM dd"
+    return String(dateFormatter.string(from: date))
 }
 
 struct ContentView_Previews: PreviewProvider {

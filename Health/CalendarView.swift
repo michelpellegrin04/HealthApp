@@ -20,6 +20,7 @@ struct CalendarView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20)
+                    .accessibilityHidden(true)
                 Text("Period Prediciton")
                     .foregroundStyle(Color.indigo)
                     .bold()
@@ -51,7 +52,7 @@ struct CalendarView: View {
             }*/
             DatePicker("Period", selection: $selectedDate)
                 .datePickerStyle(.graphical)
-                
+                .accessibilityHidden(true)
             .foregroundColor(.gray)
             //.padding(.bottom, 0)
             //.padding(.leading)
