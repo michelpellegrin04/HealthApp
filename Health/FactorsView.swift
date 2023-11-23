@@ -7,8 +7,8 @@ struct FactorsView: View {
     @State private var selectedIndex: Int? = nil
     
     let calendar = Calendar.current
-    let startDate = Date().addingTimeInterval(-86400 * 180) // 180 días antes de la fecha actual
-    let endDate = Date().addingTimeInterval(86400 * 180) // 180 días después de la fecha actual
+    let startDate = Date().addingTimeInterval(-86400 * 180)
+    let endDate = Date().addingTimeInterval(86400 * 180)
     
     var body: some View {
         
@@ -27,7 +27,7 @@ struct FactorsView: View {
                             Text(dayOfWeekInitial(from: date))
                                 .font(.headline)
                                 .foregroundColor(isToday(date: date) ? Color.white : Color.gray)
-                                .padding(10)
+                                .padding(5)
                                 .onTapGesture {
                                     self.selectedDate = date
                                     self.selectedIndex = index
@@ -56,11 +56,11 @@ struct FactorsView: View {
                             }
                             
                         }
-                        .padding(4)
+                        .padding(3)
                     }
                 }
             }
-            .padding()
+            //.padding()
             
             
         }

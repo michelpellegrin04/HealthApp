@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CalendarView: View {
+    
     let calendar = Calendar.current
     @State private var selectedDate = Date()
    
@@ -33,7 +34,7 @@ struct CalendarView: View {
             Divider()
                 //.padding(.leading)
                 //.padding(.trailing)
-            HStack{
+            /*HStack{
                 Text("Mon")
                 Spacer()
                 Text("Tue")
@@ -47,7 +48,10 @@ struct CalendarView: View {
                 Text("Sat")
                 Spacer()
                 Text("Sun")
-            }
+            }*/
+            DatePicker("Period", selection: $selectedDate)
+                .datePickerStyle(.graphical)
+                
             .foregroundColor(.gray)
             //.padding(.bottom, 0)
             //.padding(.leading)

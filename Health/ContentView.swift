@@ -18,6 +18,8 @@ struct ContentView: View {
             VStack{
                 List{
                     FactorsView()
+                        .padding(-5)
+                    
                     Section{
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
                             HStack{
@@ -31,9 +33,24 @@ struct ContentView: View {
                             }
                         }
                     } header: {
-                        Text("Menstruation")
-                            .foregroundColor(.red)
+                        VStack(alignment: .leading){
+                            HStack{
+                                Text("Cycle Log")
+                                    .font(.title2)
+                                    .foregroundStyle(Color.black)
+                                    .bold()
+                                Spacer()
+                                Button(action: {}) {
+                                    Text("Options")
+                                }
+                            }
+                            .padding(.bottom, 7)
+                            Text("MENSTRUATION")
+                                .foregroundColor(.red)
+                        }
+                        
                     }
+                    .textCase(nil)
                     .listRowBackground(Color.red.opacity(0.1))
                     
                     Section{
@@ -118,6 +135,7 @@ struct ContentView: View {
                                 }
                             }
                         }
+                        .listSectionSeparator(.hidden)
                     }
                     
                 }
@@ -125,6 +143,13 @@ struct ContentView: View {
                 .background(Color.gray.opacity(0.01).edgesIgnoringSafeArea(.all))
                 
                 
+            }
+            .toolbar{
+                Button(action: {
+                    //Here goes the action
+                }) {
+                    Label("Add Period", systemImage: "")
+                }
             }
             .background(.gray.opacity(0.1))
             
